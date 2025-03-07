@@ -1,6 +1,16 @@
 <?xml version="1.0"?>
 
 <robot name="scout_mini" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find scout_description)/urdf/lidar.xacro"/>
+
+    <material name="purple">
+        <color rgba="0.737 0.0 1.0 1" />
+    </material>
+
+    <!-- Lidar Sensor -->
+    <xacro:lidar/>
+ 
     <!-- Vehicle Geometries -->
     <!-- Base link -->
     <link name="base_link">
