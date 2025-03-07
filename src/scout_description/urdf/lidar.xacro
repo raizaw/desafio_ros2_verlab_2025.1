@@ -6,19 +6,21 @@
    <xacro:macro name="lidar">
 
 	<joint name="laser_joint" type="fixed">
-	<parent link="base_link"/>
-	<child link="laser_frame"/>
-	<origin xyz="0.1 0 0.08" rpy="0 0 0"/>
+            <parent link="base_link"/>
+	    <child link="laser_frame"/>
+	    <origin xyz="0.1 0 0.08" rpy="0 0 0"/>
 	</joint>
 
 	<link name="laser_frame">
 	<visual>
+            <origin>"0.1 0 0.08"</origin>
 	    <geometry>
 	        <cylinder radius="0.05" length="0.04"/>
 	    </geometry>
 	    <material name="purple"/>
 	</visual>
 	<collision>
+            <origin>"0.1 0 0.08"</origin>
 	    <geometry>
 	        <cylinder radius="0.05" length="0.04"/>
 	    </geometry>
@@ -28,8 +30,6 @@
 	</xacro:inertial_cylinder>
 	</link>
 
-
-
 	<gazebo reference="laser_frame">
             <material>
 	        <ambient>0.737 0.0 1.0 1</ambient>
@@ -38,12 +38,12 @@
 	    </material>
 
 	    <sensor name="laser" type="gpu_ray">
-	        <topic>"/scout_mini/scan"</topic>
-	        <pose> 0 0 0 0 0 0 </pose>
+	        <topic>/scout_mini/scan</topic>
+	        <pose> 0 0 0.2 0 0 0 </pose>
 	        <visualize>true</visualize>
 	        <update_rate>10</update_rate>
 	        <always_on>true</always_on>
-	        <gz_frame_id>"laser_frame"</gz_frame_id>
+	        <gz_frame_id>laser_frame</gz_frame_id>
 	        <ray>
 	            <scan>
 	                <horizontal>

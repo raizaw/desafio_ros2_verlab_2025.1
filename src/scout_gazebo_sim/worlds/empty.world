@@ -7,17 +7,25 @@
             <real_time_factor>1</real_time_factor>
             <real_time_update_rate>100</real_time_update_rate>
         </physics>
-        <plugin name='ignition::gazebo::systems::Physics'
-            filename='ignition-gazebo-physics-system' />
-        <plugin name='ignition::gazebo::systems::UserCommands'
-            filename='ignition-gazebo-user-commands-system' />
-        <plugin name='ignition::gazebo::systems::SceneBroadcaster'
-            filename='ignition-gazebo-scene-broadcaster-system' />
-        <plugin filename="libignition-gazebo-sensors-system.so"
+        <plugin
+            filename="ignition-gazebo-physics-system"
+            name="ignition::gazebo::systems::Physics">
+        </plugin>
+        <plugin
+            filename="ignition-gazebo-user-commands-system"
+            name="ignition::gazebo::systems::UserCommands">
+        </plugin>
+        <plugin
+            filename="ignition-gazebo-scene-broadcaster-system"
+            name="ignition::gazebo::systems::SceneBroadcaster">
+        </plugin>
+        <plugin
+            filename="ignition-gazebo-sensors-system"
             name="ignition::gazebo::systems::Sensors">
             <render_engine>ogre2</render_engine>
         </plugin>
-        <plugin filename="libignition-gazebo-contact-system.so"
+        <plugin 
+            filename="ignition-gazebo-contact-system"
             name="ignition::gazebo::systems::Contact">
         </plugin>
 
