@@ -12,13 +12,6 @@
   gz_type_name: "ignition.msgs.LaserScan" 
   direction: "IGN_TO_ROS" 
 
-# Camera info
-- ros_topic_name: "scout_mini/rgb_cam/camera_info"
-  gz_topic_name: "scout_mini/rgb_cam/camera_info"         
-  ros_type_name: "sensor_msgs/msg/CameraInfo"
-  gz_type_name: "ignition.msgs.CameraInfo" 
-  direction: "IGN_TO_ROS"          
-
 # Odom - diff drive
 - ros_topic_name: "scout_mini/odom"
   gz_topic_name: "odom"              

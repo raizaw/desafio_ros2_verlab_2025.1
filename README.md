@@ -1,5 +1,14 @@
 # README - Simulação Scout Mini no Gazebo com ROS 2 Humble
 
+## Descrição do Projeto
+
+Simulação ROS Gazebo do robô Scout Mini da AgileX Robotics. Foi incluído um sensor LiDAR 2D para coleta de dados do ambiente.
+
+- **Controle do Robô**: O pacote `teleop_twist_keyboard` foi configurado para permitir a movimentação do robô para frente, para trás e rotação.
+- **Visualização dos Sensores no RViz**: Configurado para exibir os dados coletados pelo sensor.
+
+Todo o código está armazenado no GitHub, acompanhado de um README explicativo.
+
 ## Requisitos
 
 - **ROS 2 Humble**
