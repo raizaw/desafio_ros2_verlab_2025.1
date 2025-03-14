@@ -114,7 +114,8 @@ sudo apt install ros-humble-ament-cmak
    ```
 5. Em outro terminal, controle o robô com o teclado:
    ```bash
-   ros2 run teleop_twist_keyboard teleop_twist_keyboard
+   sudo apt-get install ros-humble-teleop-twist-keyboard
+   ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=scout_mini/cmd_vel
    ```
 
 
